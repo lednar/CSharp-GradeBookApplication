@@ -40,8 +40,8 @@ namespace GradeBook.GradeBooks
             {
                 Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
             }
-
-            base.CalculateStatistics();
+            else
+                base.CalculateStatistics();
         }
 
         public override void CalculateStudentStatistics(string name)
@@ -50,8 +50,9 @@ namespace GradeBook.GradeBooks
             {
                 Console.WriteLine("Ranked grading requires at least 5 students with grades in order to properly calculate a student's overall grade.");
             }
+            else
+                base.CalculateStudentStatistics(name);
 
-            base.CalculateStudentStatistics(name);
         }
     }
 }
